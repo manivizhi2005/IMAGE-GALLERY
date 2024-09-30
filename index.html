@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 style="text-align: center;">FATHER'S LOVE</h1>
+   
+    <div class="full-img" id="fullImgBox">
+        <img src="images/img1.jpg" id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+    </div>
+
+    <div class="img-gallery">
+        <img src="images/img1.jpg"  onclick="openFullImg(this.src)">
+        <img src="images/img2.jpg"  onclick="openFullImg(this.src)">
+        <img src="images/img3.jpg"  onclick="openFullImg(this.src)">
+        <img src="images/img4.jpg"  onclick="openFullImg(this.src)">
+        <img src="images/img5.jpg"  onclick="openFullImg(this.src)">
+        <img src="images/img6.jpg"  onclick="openFullImg(this.src)">
+        
+    </div>
+    
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox")
+        var fullImg = document.getElementById("fullImg")
+
+        function openFullImg(pic){
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+        }
+
+        function closeFullImg(){
+            fullImgBox.style.display = "none";
+        }
+    </script>
+</body>
+</html>
